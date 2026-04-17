@@ -1,0 +1,9 @@
+# VSCode extension packaging
+*.vsix
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor files
+.claude/

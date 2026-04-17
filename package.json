@@ -1,0 +1,104 @@
+{
+  "name": "nvim-industrial",
+  "displayName": "Industrial Sound Effects",
+  "description": "Industrial sound effects for your editor. Every keystroke is a hammer strike. Every save, an explosion.",
+  "version": "0.1.0",
+  "publisher": "sulan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sulan/nvim-industrial"
+  },
+  "keywords": ["sound", "industrial", "audio", "typing", "fun"],
+  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./vscode/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Industrial",
+      "properties": {
+        "industrial.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Master on/off switch for all industrial sound effects."
+        },
+        "industrial.volume": {
+          "type": "number",
+          "default": 0.7,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Playback volume (0.0 = silent, 1.0 = full)."
+        },
+        "industrial.minInterval": {
+          "type": "number",
+          "default": 80,
+          "description": "Minimum milliseconds between replays of the same sound."
+        },
+        "industrial.globalMinInterval": {
+          "type": "number",
+          "default": 40,
+          "description": "Minimum milliseconds between any two sounds (overlap guard)."
+        },
+        "industrial.debounceMs": {
+          "type": "number",
+          "default": 80,
+          "description": "Leading-edge debounce interval for the typing sound (ms). The first keystroke plays immediately; subsequent keystrokes within this window are silent."
+        },
+        "industrial.events.textChange": {
+          "type": "string",
+          "default": "hammer",
+          "description": "Sound for text changes (typing). Empty string to disable."
+        },
+        "industrial.events.editorFocus": {
+          "type": "string",
+          "default": "drill_start",
+          "description": "Sound when switching to a different text editor. Empty string to disable."
+        },
+        "industrial.events.save": {
+          "type": "string",
+          "default": "explosion",
+          "description": "Sound for file save. Empty string to disable."
+        },
+        "industrial.events.open": {
+          "type": "string",
+          "default": "rivet",
+          "description": "Sound for opening a file. Empty string to disable."
+        },
+        "industrial.events.close": {
+          "type": "string",
+          "default": "chainsaw",
+          "description": "Sound for closing a file. Empty string to disable."
+        },
+        "industrial.events.startup": {
+          "type": "string",
+          "default": "factory_bell",
+          "description": "Sound when the extension activates (VSCode startup). Empty string to disable."
+        },
+        "industrial.events.shutdown": {
+          "type": "string",
+          "default": "factory_shutdown",
+          "description": "Sound when VSCode shuts down. Empty string to disable."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "industrial.enable",
+        "title": "Industrial: Enable Sounds"
+      },
+      {
+        "command": "industrial.disable",
+        "title": "Industrial: Disable Sounds"
+      },
+      {
+        "command": "industrial.play",
+        "title": "Industrial: Play Sound..."
+      }
+    ]
+  }
+}

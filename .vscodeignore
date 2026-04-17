@@ -1,0 +1,12 @@
+# Files excluded from the .vsix package.
+# The sounds/ directory is intentionally NOT excluded — it is the shared
+# resource that both the Neovim plugin and the VSCode extension use.
+
+plugin/
+lua/
+scripts/
+.claude/
+.git/
+.gitignore
+*.md
+!sounds/CREDITS.md
