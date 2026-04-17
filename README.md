@@ -1,5 +1,11 @@
 # nvim-industrial
 
+## Sales Pitch
+
+Elevating the Power User to another level with power tools — **nvim-industrial** transforms your editor into a full-blown industrial worksite, turning every mundane keystroke into a hammer strike against cold steel, every mode transition into the roar of a power drill or a cathartic hiss of steam, and every file save into a bone-rattling explosion that tells your whole building you mean business. Works seamlessly across both Neovim and VS Code, so no matter which battleground you're shipping code from, the factory never sleeps — your startup rings the factory bell, your exit winds down the turbines, and every buffer close is punctuated by the shriek of a chainsaw cutting through the noise. This isn't just an audio plugin; it's a full sensory overload that makes you *feel* the velocity, audibly rewarding every act of creation like the industrial-grade engineering powerhouse you are.
+
+---
+
 Industrial sound effects for Neovim. Every keystroke is a hammer strike. Every save, an explosion.
 
 | Event | Sound |
